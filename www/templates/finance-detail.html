@@ -1,0 +1,42 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Details">
+
+  <ion-content>
+      <form ng-submit="saveOrUpdate(finance)">
+      <div class="spacer" style="height: 40px;"></div>
+
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">FinanceId</span></div>
+            <div class="col"> <input type="number" placeholder="" ng-model="finance.rid" class="form-control" readonly="readonly" ></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Project Name</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="finance.projectName" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Budget</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="finance.budget" class="form-control"></div>
+        </div>
+        
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Cash In Bank</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="finance.cashInBank" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Wages</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="finance.wages" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Overdraft</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="finance.overdraft" class="form-control"></div>
+        </div>
+        <div class="spacer" style="height: 40px;"></div>
+        <button class="button button-calm button-block">{{ finance.rid!=null ? 'Update' : 'Save' }}</button>
+      </form>
+  </ion-content>
+</ion-view>

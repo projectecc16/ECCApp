@@ -1,0 +1,22 @@
+<ion-view view-title="Log">
+   <ion-nav-buttons side="right">
+  <a ng-click="clear()"class="button button-clear  icon ion-ios-close-outline"></a>
+    </ion-nav-buttons>
+         
+  <ion-content>
+    <!-- <textarea rows="20" cols="50">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur obcaecati temporibus totam fugiat et quae quia quisquam asperiores esse eum ipsum porro officiis reiciendis unde molestias rerum molestiae. Perferendis. 
+      </textarea> -->
+    <div class="card">
+      <!-- <div class="item item-divider">
+        I'm a Header in a Card!
+      </div> -->
+      <div class="item item-text-wrap" style="font-size:xx-small" ng-bind-html="data">
+       <!--  {{data}} -->
+      </div>
+      <!-- <div class="item item-divider">
+        I'm a Footer in a Card!
+      </div> -->
+    </div>
+  </ion-content>
+</ion-view>

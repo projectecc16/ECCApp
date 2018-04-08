@@ -1,0 +1,40 @@
+<ion-view title="Signup">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <form ng-submit="register(account)">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" ng-model="account.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="account.password">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Confirm</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-select" >
+                    <span class="input-label">Role</span>
+                    <select ng-model="account.role">
+                        <option value="Worker" >Worker</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Manager">Manager</option>
+                        <option value="CEO">CEO</option>
+                    </select>
+                </label>
+                <label class="item item-select" >
+                    <span class="input-label">Department</span>
+                    <select ng-model="account.department">
+                        <option value="Production">Production</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">Human Resource</select>
+                </label>
+                <ion-toggle ng-model="account.encryption" toggle-class="toggle-calm">Encryption</ion-toggle>
+            </ion-list>
+             <div class="spacer" style="height: 40px;"></div>
+            <button class="button button-calm button-block ">Sign Up</button>
+        </form>
+    </ion-content>
+</ion-view>

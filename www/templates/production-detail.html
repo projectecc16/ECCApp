@@ -1,0 +1,42 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Details">
+
+  <ion-content>
+      <form ng-submit="saveOrUpdate(prod)">
+      <div class="spacer" style="height: 40px;"></div>
+
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">ProductionId</span></div>
+            <div class="col"> <input type="number" placeholder="" ng-model="prod.rid" class="form-control" readonly="readonly" ></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Machine</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="prod.machine" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">PowerConception</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="prod.powerConception" class="form-control"></div>
+        </div>
+        
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">No of Workers</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="prod.noOfWorkers" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">No of Jobs</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="prod.noOfJobs" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Service Engineer</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="prod.serviceEngineer" class="form-control"></div>
+        </div>
+        <div class="spacer" style="height: 40px;"></div>
+        <button class="button button-calm button-block">{{ prod.rid!=null ? 'Update' : 'Save' }}</button>
+      </form>
+  </ion-content>
+</ion-view>

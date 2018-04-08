@@ -1,0 +1,42 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Details">
+
+  <ion-content>
+      <form ng-submit="saveOrUpdate(hr)">
+      <div class="spacer" style="height: 40px;"></div>
+
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">HR Id</span></div>
+            <div class="col"> <input type="number" placeholder="" ng-model="hr.rid" class="form-control" readonly="readonly" ></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Employee Name</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="hr.employeeName" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Employee Title</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="hr.employeeTitle" class="form-control"></div>
+        </div>
+        
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Employee Dept</span></div>
+            <div class="col"><input type="text" placeholder="" ng-model="hr.employeeDept" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Employee Phone</span></div>
+            <div class="col"><input type="number" placeholder="" ng-model="hr.employeePhone" class="form-control"></div>
+        </div>
+        <div class="row item item-input">
+            <div class="col"><span class="input-label">Employee Email</span></div>
+            <div class="col"><input type="email" placeholder="" ng-model="hr.employeeEmail" class="form-control"></div>
+        </div>
+        <div class="spacer" style="height: 40px;"></div>
+        <button class="button button-calm button-block">{{ hr.rid!=null ? 'Update' : 'Save' }}</button>
+      </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view view-title="Profile">
+  <ion-content >
+        <form >
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" ng-model="account.name" readonly="">
+                </label>
+                
+                <label class="item item-select" >
+                    <span class="input-label">Role</span>
+                    <select ng-model="account.role">
+                        <option value="Worker">Worker</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Manager">Manager</option>
+                        <option value="CEO">CEO</option>
+                    </select>
+                </label>
+                <label class="item item-select" >
+                    <span class="input-label">Department</span>
+                    <select ng-model="account.department">
+                        <option value="Production">Production</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">Human Resource</select>
+                </label>
+                <ion-toggle ng-model="account.encryption" toggle-class="toggle-calm">Encryption</ion-toggle>
+            </ion-list>
+             <div class="spacer" style="height: 40px;"></div>
+             <div class="row">
+            <div class="col" align="center"><button ng-click="update(account)" class="button button-calm">Update</button></div>
+            <div class="col" align="center"> <button ng-click="genkey(account)" class="button button-calm">GenKey</button></div>
+            <div class="col" align="center"> <button ng-click="signout(account)" class="button button-calm">Signout</button></div>
+        </div>
+            
+            
+        </form>
+    </ion-content>
+
+</ion-view>
