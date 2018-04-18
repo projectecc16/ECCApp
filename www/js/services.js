@@ -1,8 +1,8 @@
 app
 .value('eccConstants', {
-    webUrlBase: 'http://localhost:8080',
+    webUrlBase: 'https://eccweb.herokuapp.com/',
     //webUrlBase: 'http://eccweb-ksquareapps.rhcloud.com',
-    piUrlBase: 'http://localhost:8081'
+    piUrlBase: 'https://eccpi.herokuapp.com/'
   })
 .value('loginUser', {
     encryption: false
