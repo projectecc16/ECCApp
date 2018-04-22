@@ -1,7 +1,9 @@
 {
   "name": "ECCApp",
   "app_id": "718eec05",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*",
